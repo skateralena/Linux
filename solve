@@ -1,0 +1,5 @@
+#!/bin/bash 
+
+sed -e "s/[[:punct:]]/ /g" $1 | tr '[:upper:]' '[:lower:]' | tr ' ' '\n' | grep -v '^$'| sort | uniq -c | sort -r 
+
+
